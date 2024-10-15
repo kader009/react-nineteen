@@ -1,7 +1,9 @@
+import Switch from "./pages/Switch";
+
 const App = () => {
   return (
     <>
-      <div className="text-blue-500">hellow</div>
+      <Switch/>
     </>
   );
 };

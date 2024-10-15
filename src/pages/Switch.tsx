@@ -1,12 +1,18 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-function useTggle(initialValue = false){
-  const [state, setState] = useState(initialValue)
+function useToggle(initialValue: boolean) {
+  const [state, setState] = useState<boolean>(initialValue);
+
+  const toggle = () => setState(!state);
+
+  return [state, toggle] as const;
 }
 const Switch = () => {
+  const [isOn, ToggleisOn] = useToggle(false);
   return (
-    <div>
-      
+    <div className="text-center">
+      <p>The switch is {isOn ? 'On' : 'Off'}</p>
+      <button onClick={ToggleisOn}>Toggle</button>
     </div>
   );
 };
