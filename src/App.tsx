@@ -1,9 +1,11 @@
-import Switch from "./pages/Switch";
+import DataFetching from "./pages/DataFetching";
+// import Switch from "./pages/Switch";
 
 const App = () => {
   return (
     <>
-      <Switch/>
+      {/* <Switch/> */}
+      <DataFetching/>
     </>
   );
 };

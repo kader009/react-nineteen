@@ -12,7 +12,7 @@ const Switch = () => {
   return (
     <div className="text-center">
       <p>The switch is {isOn ? 'On' : 'Off'}</p>
-      <button onClick={ToggleisOn}>Toggle</button>
+      <button className='bg-black px-2 py-1 rounded text-white' onClick={ToggleisOn}>Toggle</button>
     </div>
   );
 };
