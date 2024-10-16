@@ -7,10 +7,13 @@ const DataFetching = () => {
     console.log('I am loggin..');
   }, []);
 
+  useCallback(() =>{},[])
+
   const increment = useCallback(() => {
     SetCount(count + 1);
     SetCount(count + 1);
   }, [count]);
+
   return (
     <div className="text-center">
       {count}
