@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Profiler, useCallback, useEffect, useState } from 'react';
 
 const DataFetching = () => {
@@ -15,18 +14,26 @@ const DataFetching = () => {
     SetCount(count + 1);
   }, [count]);
 
-
-  const onRenderCallback = (
-    id: any, 
-    phase: any,
-    actualDuration: any, 
-    baseDuration: any, 
-    startTime: any, 
-    commitTime: any, 
-  ) => {
-    console.log({ id, phase, actualDuration, baseDuration, startTime, commitTime });
-  };
-
+  const onRenderCallback = useCallback(
+    (
+      id: string,
+      phase: 'mount' | 'update' | 'nested-update',
+      actualDuration: number,
+      baseDuration: number,
+      startTime: number,
+      commitTime: number
+    ) => {
+      console.log({
+        id,
+        phase,
+        actualDuration,
+        baseDuration,
+        startTime,
+        commitTime,
+      });
+    },
+    []
+  );
 
   return (
     <Profiler id="dataFetching" onRender={onRenderCallback}>
