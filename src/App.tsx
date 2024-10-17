@@ -2,6 +2,7 @@ import { Profiler, useCallback } from "react";
 import DataFetching from "./pages/DataFetching";
 import Switch from "./pages/Switch";
 import Register from "./Account/Register";
+import Login from "./Account/Login";
 
 const App = () => {
   const onRenderCallback = useCallback(
@@ -32,6 +33,7 @@ const App = () => {
     </Profiler>
       <DataFetching/> */}
       <Register/>
+      <Login/>
     </>
   );
 };

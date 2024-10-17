@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.7.7",
     "react": "^0.0.0-experimental-cd22717c-20241013",
     "react-dom": "^0.0.0-experimental-cd22717c-20241013"
   },
